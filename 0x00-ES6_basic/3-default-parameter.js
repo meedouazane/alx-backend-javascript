@@ -1,4 +1,5 @@
-export default function getSumOfHoods(initialNumber = 34, expansion1989 = 89, expansion2019 = 19) {
+export default function getSumOfHoods(initialNumber, expansion1989 = 89, expansion2019 = 19) {
+  /* eslint-disable no-param-reassign */
   if (expansion1989 === undefined) {
     expansion1989 = 89;
   }
