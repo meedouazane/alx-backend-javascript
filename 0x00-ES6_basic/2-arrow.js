@@ -5,5 +5,6 @@ export default function getNeighborhoodsList() {
     sanFranciscoNeighborhoods.push(newNeighborhood);
     return sanFranciscoNeighborhoods;
   };
+
   return { sanFranciscoNeighborhoods, addNeighborhood };
 }
