@@ -1,11 +1,10 @@
 export default function cleanSet(set, startString) {
-  let string = "";
+  let string = '';
   for (const value of set) {
     if (value.startsWith(startString)) {
-      string += value + '-';
-    } else {
-      string = "";
+      const st = value.replace(startString, '');
+      string += `${st}-`;
     }
   }
-  return string.slice(0, -2);
+  return string.slice(0, -1);
 }
