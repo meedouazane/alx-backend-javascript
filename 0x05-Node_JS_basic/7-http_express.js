@@ -11,9 +11,7 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
   fs.readFile(process.argv[2].toString(), 'utf-8', (err, data) => {
     if (err) {
-      res.writeHead(500, { 'Content-Type': 'text/plain' });
-      res.end('Cannot load the database');
-      return;
+      throw new Error('Cannot load the database');
     }
 
     const lines = data.split('\n');
