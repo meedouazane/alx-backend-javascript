@@ -1,13 +1,8 @@
-console.log('Welcome to Holberton School, what is your name?');
-let input = '';
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
+
 process.stdin.on('data', (data) => {
-  input += data;
+  process.stdout.write(`Your name is: ${data}`);
 });
 process.stdin.on('end', () => {
-  const name = input.trim();
-  console.log(`Your name is: ${name}`);
-});
-process.on('exit', () => {
-  console.log('This important software is now closing');
-  process.exit(0);
+  process.stdout.write('This important software is now closing\n');
 });
