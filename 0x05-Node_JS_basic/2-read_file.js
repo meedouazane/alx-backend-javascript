@@ -3,7 +3,7 @@ const fs = require('fs');
 function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf-8');
-    const lines = data.split('\n');
+    const lines = data.toString().split('\n');
     const validLine = lines.filter((line) => line.trim() !== '');
     let CS = 0;
     const csList = [];
