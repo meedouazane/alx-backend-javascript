@@ -45,4 +45,4 @@ app.get('/students', (req, res) => {
 
 app.listen(port, () => {
 });
-exports.module = app;
+module.exports = app;
