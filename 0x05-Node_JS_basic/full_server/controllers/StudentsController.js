@@ -10,7 +10,7 @@ class StudentsController {
       for (let i = 0; i < keys.length; i += 1) {
         list.push(`Number of students in ${keys[i]}: ${students[keys[i]].length}. List: ${students[keys[i]].join(', ')}`);
       }
-      response.status(200).send(output.join('\n'));
+      response.status(200).send(list.join('\n'));
     }).catch(() => {
       response.status(500).send('Cannot load the database');
     });
