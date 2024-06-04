@@ -4,9 +4,6 @@ function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf-8');
     const lines = data.toString().split('\n').filter((line) => line.trim() !== '');
-    if (lines.length <= 1) {
-      throw new Error('No students found in the database');
-    }
 
     let CS = 0;
     const csList = [];
@@ -32,7 +29,7 @@ function countStudents(path) {
     console.log(`Number of students in CS: ${CS}. List: ${csList.join(', ')}`);
     console.log(`Number of students in SWE: ${SWE}. List: ${sweList.join(', ')}`);
   } catch (err) {
-    console.error('Cannot load the database:', err.message);
+    throw new Error('Cannot load the database');
   }
 }
 
