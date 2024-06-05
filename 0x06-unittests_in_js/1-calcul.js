@@ -9,6 +9,6 @@ function calculateNumber(type, a, b) {
     }
     return Math.round(a) / Math.round(b);
   }
-  return 'Wrong Type';
+  throw new Error('Invalid type');
 }
 module.exports = calculateNumber;
