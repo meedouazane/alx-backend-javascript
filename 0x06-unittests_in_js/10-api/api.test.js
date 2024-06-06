@@ -60,11 +60,11 @@ describe('APP testing', function() {
             done();
         });
     });
-    it('Correct Body for available_payments', function(done) {
-        request('http://localhost:7865/login', function(_error, response, body) {
-            expect(response.statusCode).to.equal(200);
-            expect(body).to.equal(`Welcome ${body.userName}`);
-            done();
+    it('Correct Body for login', function(done) {
+        request.post(`http://localhost:7865/login`, {json: {userName: 'Ed'}}, (_err, res, body) => {
+          expect(res.statusCode).to.be.equal(200);
+          expect(body).to.be.equal('Welcome Ed');
+          done();
         });
-    });
+      });   
 });
