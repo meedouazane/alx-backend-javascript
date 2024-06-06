@@ -7,12 +7,13 @@ app.get('/', (req, res) => {
   res.send('Welcome to the payment system');
 });
 app.get('/cart/:id', (req, res) => {
-  const { id } = req.params;
-  if (!Number.isNaN(id)) {
-    res.send(`Welcome to the payment system ${id}`);
-  } else {
-    res.status(404).send('Not Found');
-  }
+    const id = req.params.id;
+
+    if (!isNaN(Number(id))) {
+        res.send(`Welcome to the payment system ${id}`);
+    } else {
+        res.status(404).send('Not Found');
+    }
 });
 app.listen(port, () => {
   console.log('API available on localhost port 7865');
