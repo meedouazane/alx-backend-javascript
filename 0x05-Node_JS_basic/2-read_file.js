@@ -28,7 +28,7 @@ function countStudents(path) {
       }
     }
 
-    console.log('Number of students:', lines.length - 1);
+    console.log('Number of students: ', lines.length - 1);
     console.log(`Number of students in CS: ${CS}. List: ${csList.join(', ')}`);
     console.log(`Number of students in SWE: ${SWE}. List: ${sweList.join(', ')}`);
   } catch (err) {
