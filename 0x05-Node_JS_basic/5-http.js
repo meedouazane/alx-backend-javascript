@@ -32,8 +32,8 @@ const app = http.createServer((req, res) => {
           sweList.push(firstname);
         }
       }
-
-      response.push(`Number of students: ${validLines.length - 1}`);
+      const len = validLines.length - 1;
+      response.push(`Number of students: ${len}`);
       response.push(`Number of students in CS: ${CS}. List: ${csList.join(', ')}`);
       response.push(`Number of students in SWE: ${SWE}. List: ${sweList.join(', ')}`);
 
