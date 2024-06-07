@@ -27,8 +27,8 @@ function countStudents(path) {
         }
       }
     }
-
-    console.log('Number of students: ', lines.length - 1);
+    const len = lines.length - 1;
+    console.log(`Number of students: ${len}`);
     console.log(`Number of students in CS: ${CS}. List: ${csList.join(', ')}`);
     console.log(`Number of students in SWE: ${SWE}. List: ${sweList.join(', ')}`);
   } catch (err) {
